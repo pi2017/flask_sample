@@ -24,14 +24,14 @@ def hello_to(name):
 users = ['Root', 'Boot', 'Foot']
 
 
-@app.route('/<users>/')
-def hello_all(users):
+@app.route('/all/')
+def hello_all():
     return render_template('hello_all.html', users=users)
 
 
-@app.route('/<pic>/')
-def get_pic(pic):
-    return render_template('get_pic.html', user_image=uav.jpg)
+@app.route('/pic/')
+def get_pic():
+    return render_template('get_pic.html')
 
 
 if __name__ == '__main__':
