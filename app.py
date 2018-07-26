@@ -6,7 +6,9 @@ Bootstrap -- for site design
 
 """
 
-from flask import Flask, render_template, request, url_for
+from os import listdir
+
+from flask import Flask, render_template
 
 app = Flask(__name__, static_url_path='/static')
 
@@ -31,7 +33,8 @@ def hello_all():
 
 @app.route('/pic/')
 def get_pic():
-    return render_template('get_pic.html')
+    data = ['images/' + file for file in listdir('static/images')]
+    return render_template('get_pic.html', data=data)
 
 
 if __name__ == '__main__':
