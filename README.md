@@ -1,3 +1,2 @@
-# flask_sample
-simple site
-Flask 
+# Flask
+simple website
